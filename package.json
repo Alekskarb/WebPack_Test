@@ -1,0 +1,25 @@
+{
+  "name": "webpack_test",
+  "version": "1.0.0",
+  "description": "Create application with manual webpack setup for optimize js, css, images, audio -files",
+  "private": true,
+  "scripts": {
+    "start": "npx webpack --mode development",
+    "build": "npx webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alekskarb/WebPack_Test.git"
+  },
+  "keywords": [],
+  "author": "ADK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alekskarb/WebPack_Test/issues"
+  },
+  "homepage": "https://github.com/Alekskarb/WebPack_Test#readme",
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
