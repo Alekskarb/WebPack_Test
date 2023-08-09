@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Alekskarb/WebPack_Test#readme",
   "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
     "html-webpack-plugin": "^5.5.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
