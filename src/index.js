@@ -1,38 +1,23 @@
-const root = document.getElementById('wp_test');
+import data from "./data";
 
-// function plugJS() {
+const bg = document.querySelector('.forest_bg');
+const range = document.querySelector('input');
 const images = document.querySelectorAll('.image')
 const sounds = Array.from(document.querySelectorAll('audio'));
 const pictures = document.querySelectorAll('img');
-const bg = document.getElementById('wp_test');
 let volume = 0.2;
-bg.style.backgroundImage = 'url(./summer-bg.jpg)';
 
-const data = [
-    {
-        img: './public/assets/summer-bg.jpg',
-        audio: './public/assets/sounds/summer.mp3',
-        icon: './src/assets/icons/sun.svg'
-    },
-    {
-        img: './public/assets/rainy-bg.jpg',
-        audio: './public/assets/sounds/rain.mp3',
-        icon: './public/assets/icons/cloud-rain.svg'
-    },
-    {
-        img: './public/assets/winter-bg.jpg',
-        audio: './public/assets/sounds/winter.mp3',
-        icon: './public/assets/icons/cloud-snow.svg'
-    },
-]
+bg.style.backgroundImage = 'url(./assets/summer-bg.jpg)';
 
 function setVolume(e) {
-    volume = e.value;
+    volume = e.target.value;
     sounds.find(a => {
         if (!a.paused)
             a.volume = volume;
     })
 }
+
+range.addEventListener('click', setVolume);
 
 function setBGandPlay() {
     pictures.forEach(pict => {
@@ -40,6 +25,10 @@ function setBGandPlay() {
         }
     )
 }
+
+images.forEach(i => {
+i.addEventListener('click', setBGandPlay);
+})
 
 function getEvent(e) {
     images.forEach((image) => {
@@ -56,7 +45,3 @@ function getEvent(e) {
         }
     )
 }
-
-// }
-// root.append(plugJS())
-// window.onload = plugJS;
